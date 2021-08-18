@@ -1,11 +1,13 @@
 package com.example.demo.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.http.HttpStatus;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -16,6 +18,8 @@ import java.util.Date;
 @Entity
 @Table(name = "member")
 public class Member {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -31,4 +35,6 @@ public class Member {
         this.age = age;
         this.address = address;
     }
+
+
 }
